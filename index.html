@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font: 16px Arial;  
+}
+
+/*the container must be positioned relative:*/
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: rgb(245, 0, 0);
+  color: #fff;
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+
+}    
+    #myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+</head>     
+<body>
+    
+           <center>
+    <img src="logo.png" alt="logo">
+        
+    <div>
+    <div class="main">
+
+<h2>SDS DATA SHEETS</h2>
+
+    <p>Enter Chemical</p>
+        
+<!--Make sure the form has the autocomplete function switched off:-->
+<form autocomplete="off" action="/action_page.php">
+  <div class="autocomplete" style="width:300px;">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+    </div>
+</form>
+</div>
+        <br>
+        <div class="main">
+           <ul id="myUL">
+  <li><a href="#">.2 / 3 mm GLASS BEADS DRAGON</a></li>
+  <li><a href="0118pls.html" target="_self">0118 -1PLS</a></li>
+  <li><a href="100hnink.html" target="_self" >100 -Hn Ink Hardener</a></li> 
+  <li><a href="135.html" target="_self">135 Soldering FLux</a></li>
+  <li><a href="145 flux.html" target="_self">145 Rosin FLux</a></li>
+  <li><a href="16-5makeup.html" target="_self">16-5905 Make-up Fluid</a></li>
+  <li><a href="185flux.html" target="_self">185 Flux</a></li>
+  <li><a href="186RMA.html" target="_self">186 RMA Flux</a></li>
+  <li><a href="7132whiteink.html" target="_self">7132 white ink</a></li>
+  <li><a href="7227blackink.html" target"_self">7227 Black Ink</a></li>
+               <li><a href="734 flowable.html" target="_self">734 Flowable Sealant</a>
+     <li><a href="74010-10.html" target"-self">74010-10</a></li>
+    <li><a href="74010A.html" target"-self">74010A</a></li>
+  <li><a href="8829whiteink.html" target="_self">8829 White Ink</a></li>
+               <!--
+  <li><a href="A-2epoxyadhesive.html" target"_self">A-2 Epoxy Adhesive</a></li>
+  <li><a href="AC-43.html" target="self">Ac-43 Polyester Resin</a></li>
+  <<li><a href="#">.2 / 3 mm GLASS BEADS DRAGON</a></li>
+  <li><a href="#">.2 / 3 mm GLASS BEADS DRAGON</a></li>
+  <li><a href="#">.2 / 3 mm GLASS BEADS DRAGON</a></li>
+  <li><a href="#">.2 / 3 mm GLASS BEADS DRAGON</a></li>
+  <li><a href="#">.2 / 3 mm GLASS BEADS DRAGON</a></li>
+  <li><a href="#">.2 / 3 mm GLASS BEADS DRAGON</a></li>
+  <li><a href="#">.2 / 3 mm GLASS BEADS DRAGON</a></li>
+  <li><a href="#">.2 / 3 mm GLASS BEADS DRAGON</a></li>
+  <li><a href="#">.2 / 3 mm GLASS BEADS DRAGON</a></li>
+
+                   -->
+   <li><a href="Acetone.html" target="_self">Acetone</a>
+
+
+  <li><a href="#">Billy</a></li>
+  <li><a href="#">Bob</a></li>
+
+  <li><a href="#">Calvin</a></li>
+  <li><a href="#">Christina</a></li>
+  <li><a href="#">Cindy</a></li>
+</ul>
+        </div>
+<script>
+    function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+</script>
+
+</body>
+</html>
